@@ -17,8 +17,8 @@ Feature: Authentication
   Scenario: Login
     Given I go to the login page
     When I fill in the following:
-      | Username  | steve         |
-      | Password  | 12345         |
+      | Username          | steve                   |
+      | Password          | 12345                   |
     And I press "Login"
     Then I should be redirected to the home page
     And the page should display "Logout" button
