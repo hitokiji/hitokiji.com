@@ -7,7 +7,7 @@ Feature: Kiji for logged in user
     Given a logged in user
     And a user with following data:
       | key           | value                 |
-      | user_name     | chibicode             |
+      | username     | chibicode             |
     And today's kiji submitted by "chibicode" with following data:
       | key           | value                 |
       | title         | Hitokiji is launched! |
@@ -21,7 +21,7 @@ Feature: Kiji for logged in user
   Scenario: View comments for a single kiji
     Given a user with following data:
       | key           | value                 |
-      | user_name     | kn                    |
+      | username     | kn                    |
     And a comment made by "kn" with following data:
       | key           | value                 |
       | text          | Congrats!             |
@@ -42,7 +42,7 @@ Feature: Kiji for logged in user
   Scenario: Reply to a comment
     Given a user with following data:
       | key           | value                 |
-      | user_name     | kn                    |
+      | username     | kn                    |
     And a comment made by "kn" with following data:
       | key           | value                 |
       | text          | Congrats!             |

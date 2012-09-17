@@ -6,7 +6,7 @@ Feature: Kiji for logged out user
   Background:
     Given a user with following data:
       | key           | value                 |
-      | user_name     | chibicode             |
+      | username     | chibicode             |
     And today's kiji submitted by "chibicode" with following data:
       | key           | value                 |
       | title         | Hitokiji is launched! |
@@ -20,7 +20,7 @@ Feature: Kiji for logged out user
   Scenario: View comments for a single kiji
     Given a user with following data:
       | key           | value                 |
-      | user_name     | kn                    |
+      | username     | kn                    |
     And a comment made by "kn" with following data:
       | key           | value                 |
       | text          | Congrats!             |
@@ -33,12 +33,12 @@ Feature: Kiji for logged out user
     Given I go to the home page
     When I fill in "What's this?" for "text" of "comment" form
     And I press "Add comment"
-    Then I should be redirected to the login page
+    Then I should be redirected to the signup page
 
   Scenario: Reply to a comment
     Given a user with following data:
       | key           | value                 |
-      | user_name     | kn                    |
+      | username     | kn                    |
     And a comment made by "kn" with following data:
       | key           | value                 |
       | text          | Congrats!             |
@@ -46,4 +46,4 @@ Feature: Kiji for logged out user
     When I press "Reply..."
     And I fill in "Thanks!" for "text" of "reply" form
     And I press "Reply"
-    Then I should be redirected to the login page
+    Then I should be redirected to the signup page
